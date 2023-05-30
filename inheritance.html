@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class employee{
+            constructor (id,name,salary,des){
+                this.e_id = id
+                this.e_nm = name
+                this.e_salary = salary
+                this.e_des=des
+            }
+            working_hours(hours){
+                console.log(this.e_id+this.e_name+"is hired as"+this.e_des+"on this salary"+this.e_salary+"haha"+hours)
+
+            }
+                
+        }
+        class department extends employee{
+            constructor(id,name,des,salary,department){
+                super(id,name,des,salary,department)
+                this.e_depart = department;
+            }
+
+        }
+        let e1 = new department(01,"usman",45000,"faculty","addmision department")
+        let e2 = new department(02,"ali",34000,"faculty","addmision department")
+        
+        console.log(e1,e2)
+        e1.working_hours("12 to 5")
+        
+
+    </script>
+</body>
+</html>
